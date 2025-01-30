@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRADE 9 SECOND TERM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #000000, #111111);
+            margin: 0;
+            flex-direction: column;
+            color: white;
+        }
+        .container {
+            text-align: center;
+        }
+        .btn {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            background: #222222;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn:hover {
+            background: #ff5858;
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Muzaakaraath</h1>
+        <button class="btn" onclick="downloadFile('fiqh.pdf')">Fiqh</button>
+        <button class="btn" onclick="downloadFile('meeras.pdf')">Meeraas</button>
+        <button class="btn" onclick="downloadFile('mutala.pdf')">Mutala`</button>
+        <button class="btn" onclick="downloadFile('nusoos.pdf')">Nusoos</button>
+        <button class="btn" onclick="downloadFile('seera.pdf')">Seera</button>
+        <button class="btn" onclick="downloadFile('thauheedh')">Thauheedh</button>
+        <button class="btn" onclick="downloadFile('uloom.pdf')">Uloom</button>
+        <button class="btn" onclick="downloadFile('sorf.pdf')">Sorf</button>
+        <button class="btn" onclick="downloadFile('ijthimaaiyya.pdf')">Ijthimaaiyya</button>
+    </div>
+    <script>
+        function downloadFile(filename) {
+            const link = document.createElement('a');
+            link.href = filename;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
